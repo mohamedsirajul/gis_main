@@ -63,7 +63,7 @@ export default function SuperAdminLogin() {
 
     try {
       const response = await fetch(
-        `https://luisnellai.xyz/siraj/admin/sadmin_login.php`,
+        `https://luisnellai.xyz/new_gis_backend/admin/sadmin_login.php`,
         {
           method: "POST",
           headers: {

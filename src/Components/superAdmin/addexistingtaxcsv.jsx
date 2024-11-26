@@ -48,7 +48,7 @@ function AddExistingTax() {
 
     try {
       const response = await axios.post(
-        "https://luisnellai.xyz/siraj/addexistingtax.php", // Replace with your actual backend endpoint
+        "https://luisnellai.xyz/new_gis_backend/addexistingtax.php", // Replace with your actual backend endpoint
         formData,
         {
           headers: {

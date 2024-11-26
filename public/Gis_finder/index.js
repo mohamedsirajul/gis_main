@@ -67,7 +67,8 @@ var map = new ol.Map({
     view: view
 });
 
-var originalExtent = [8560234.043578, 1234399.643779, 8563649.882101, 1236292.160363];
+var originalExtent = [8562400.154726, 1239705.308913, 8565992.009201, 1241694.894130];
+
 map.getView().fit(originalExtent, {
     size: map.getSize(),
     maxZoom: 8
@@ -75,22 +76,22 @@ map.getView().fit(originalExtent, {
 
 var currentInteraction;
 
-var submittedGisIds = new Set();
+var submittedNewGisIds = new Set();
 
 function isGisIdSubmitted(gisId) {
-    return submittedGisIds.has(gisId);
+    return submittedNewGisIds.has(gisId);
 }
 
 window.updateSubmittedGisId = function(gisId) {
-    submittedGisIds.add(gisId);
+    submittedNewGisIds.add(gisId);
     lyr_building_ppt.changed();
 };
 
 window.addEventListener('load', function() {
     try {
-        const storedGisIds = JSON.parse(localStorage.getItem('submittedGisIds') || '[]');
+        const storedGisIds = JSON.parse(localStorage.getItem('submittedNewGisIds') || '[]');
         storedGisIds.forEach(gisId => {
-            submittedGisIds.add(gisId);
+            submittedNewGisIds.add(gisId);
             window.updateBuildingColor(gisId, 'rgba(0,255,0,0.8)');
         });
         lyr_building_ppt.changed();

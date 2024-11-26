@@ -84,7 +84,7 @@ const Surveyor = () => {
   const fetchUsers = async () => {
     try {
       const response = await fetch(
-        "https://luisnellai.xyz/siraj/admin/getAllUsers.php"
+        "https://luisnellai.xyz/new_gis_backend/admin/getAllUsers.php"
       );
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -178,7 +178,7 @@ const Surveyor = () => {
 
     try {
       const response = await fetch(
-        "https://luisnellai.xyz/siraj/admin/add_user.php",
+        "https://luisnellai.xyz/new_gis_backend/admin/add_user.php",
         {
           method: "POST",
           headers: {
@@ -223,7 +223,7 @@ const Surveyor = () => {
       const formattedToDate = dayjs(toDate).format('YYYY-MM-DD');
       
       const response = await fetch(
-        `https://luisnellai.xyz/siraj/getsurveylog.php?from_date=${formattedFromDate}&to_date=${formattedToDate}`
+        `https://luisnellai.xyz/new_gis_backend/getsurveylog.php?from_date=${formattedFromDate}&to_date=${formattedToDate}`
       );
 
       if (!response.ok) {

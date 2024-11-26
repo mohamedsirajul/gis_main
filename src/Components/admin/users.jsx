@@ -83,7 +83,7 @@ const Surveyors = () => {
   const fetchSurveyors = async () => {
     try {
       const response = await axios.get(
-        "https://luisnellai.xyz/siraj/admin/getAllUsers.php"
+        "https://luisnellai.xyz/new_gis_backend/admin/getAllUsers.php"
       );
       setSurveyors(response.data);
 
@@ -186,7 +186,7 @@ const Surveyors = () => {
     if (validateForm()) {
       try {
         const response = await axios.post(
-          "https://luisnellai.xyz/siraj/admin/add_user.php",
+          "https://luisnellai.xyz/new_gis_backend/admin/add_user.php",
           newSurveyor
         );
         setSuccessMessage("Surveyor added successfully!");
@@ -258,7 +258,7 @@ const Surveyors = () => {
       const formattedToDate = dayjs(toDate).format('YYYY-MM-DD');
       
       const response = await axios.get(
-        `https://luisnellai.xyz/siraj/getsurveylog.php?from_date=${formattedFromDate}&to_date=${formattedToDate}`
+        `https://luisnellai.xyz/new_gis_backend/getsurveylog.php?from_date=${formattedFromDate}&to_date=${formattedToDate}`
       );
 
       setSurveyLogs(response.data.data);

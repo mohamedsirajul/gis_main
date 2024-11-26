@@ -67,7 +67,7 @@ const Fad = () => {
   }
 
   const fetchData = () => {
-    fetch("https://luisnellai.xyz/siraj/flooranalysisdata.php")
+    fetch("https://luisnellai.xyz/new_gis_backend/flooranalysisdata.php")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -87,7 +87,7 @@ const Fad = () => {
   const fetchDataByAssessmentNo = (assessmentNo) => {
     const requestBody = { assessmentNo: assessmentNo };
 
-    fetch("https://luisnellai.xyz/siraj/get_data_byassono.php", {
+    fetch("https://luisnellai.xyz/new_gis_backend/get_data_byassono.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -197,7 +197,7 @@ const Fad = () => {
     console.log("All submitted data:", updatedFacilitySubmittedData);
 
     // Sending all data to the server
-    fetch("https://luisnellai.xyz/siraj/add_tax.php", {
+    fetch("https://luisnellai.xyz/new_gis_backend/add_tax.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

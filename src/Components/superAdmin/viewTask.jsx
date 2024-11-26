@@ -27,7 +27,7 @@ const SViewSurvey = () => {
     const fetchTasks = async () => {  
       try {
         const response = await fetch(
-          `https://luisnellai.xyz/siraj/admin/get_assigned_task.php/${user_id}`,
+          `https://luisnellai.xyz/new_gis_backend/admin/get_assigned_task.php/${user_id}`,
           {
             method: "GET",
             headers: {

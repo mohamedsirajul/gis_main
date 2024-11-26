@@ -298,7 +298,7 @@ function PropertyDetails() {
 
   useEffect(() => {
     if (selectedBillNo) {
-      fetch("https://luisnellai.xyz/siraj/getbybillno.php", {
+      fetch("https://luisnellai.xyz/new_gis_backend/getbybillno.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -330,7 +330,7 @@ function PropertyDetails() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://luisnellai.xyz/siraj/admin/get_assigned_task.php/${user_id}`);
+        const response = await fetch(`https://luisnellai.xyz/new_gis_backend/admin/get_assigned_task.php/${user_id}`);
         const result = await response.json();
         
         // Check if result has the expected structure
@@ -364,7 +364,7 @@ function PropertyDetails() {
   }, [user_id]);
 
   useEffect(() => {
-    fetch("https://luisnellai.xyz/siraj/get_trade.php")
+    fetch("https://luisnellai.xyz/new_gis_backend/get_trade.php")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -623,7 +623,7 @@ function PropertyDetails() {
 
       // Make the API call
       const response = await fetch(
-        "https://luisnellai.xyz/siraj/postbuildingdata.php",
+        "https://luisnellai.xyz/new_gis_backend/postbuildingdata.php",
         {
           method: "POST",
           body: formData
@@ -781,7 +781,7 @@ function PropertyDetails() {
     }
 
     try {
-      const response = await fetch("https://luisnellai.xyz/siraj/editstreetdata.php", {
+      const response = await fetch("https://luisnellai.xyz/new_gis_backend/editstreetdata.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -915,7 +915,7 @@ function PropertyDetails() {
   // Define fetchGisIds inside the component
   const fetchGisIds = async () => {
     try {
-     const response = await fetch('https://luisnellai.xyz/siraj/getGisIds.php', {
+     const response = await fetch('https://luisnellai.xyz/new_gis_backend/getGisIds.php', {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
@@ -949,7 +949,7 @@ function PropertyDetails() {
   useEffect(() => {
     fetchGisIds().then(gisIds => {
       // Store the GIS IDs in localStorage
-      localStorage.setItem('submittedGisIds', JSON.stringify(gisIds));
+      localStorage.setItem('submittedNewGisIds', JSON.stringify(gisIds));
     });
   }, []); // Empty dependency array means this runs once when component mounts
 
@@ -965,7 +965,7 @@ function PropertyDetails() {
       setProfTaxError(null);
       
       try {
-        const response = await fetch("https://luisnellai.xyz/siraj/getProfTaxNumbers.php", {
+        const response = await fetch("https://luisnellai.xyz/new_gis_backend/getProfTaxNumbers.php", {
           method: 'GET',
           headers: {
             'Accept': 'application/json',

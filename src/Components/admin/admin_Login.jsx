@@ -63,7 +63,7 @@ export default function AdminLogin() {
 
     try {
       const response = await fetch(
-        `https://luisnellai.xyz/siraj/admin/admin_login.php`,
+        `https://luisnellai.xyz/new_gis_backend/admin/admin_login.php`,
         {
           method: "POST",
           headers: {

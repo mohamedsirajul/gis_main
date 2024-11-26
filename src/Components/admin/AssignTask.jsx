@@ -55,7 +55,7 @@ const AssignTask = () => {
     const fetchUser = async () => {
       try {
         const response = await fetch(
-          `https://luisnellai.xyz/siraj/admin/getUserbyId.php/${user_id}`
+          `https://luisnellai.xyz/new_gis_backend/admin/getUserbyId.php/${user_id}`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -71,7 +71,7 @@ const AssignTask = () => {
 
     const fetchProperties = async () => {
       try {
-        const response = await fetch('https://luisnellai.xyz/siraj/getproperty.php', {
+        const response = await fetch('https://luisnellai.xyz/new_gis_backend/getproperty.php', {
           method: 'GET',
           headers: {
             'Accept': 'application/json',
@@ -256,7 +256,7 @@ const AssignTask = () => {
     // Example fetch request (uncomment and customize as needed)
     try {
       const response = await fetch(
-        "https://luisnellai.xyz/siraj/admin/task_assigned.php",
+        "https://luisnellai.xyz/new_gis_backend/admin/task_assigned.php",
         {
           method: "POST",
           headers: {

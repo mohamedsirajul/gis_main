@@ -58,7 +58,7 @@ const ViewSurvey = () => {
     try {
       setLoading(true);
      const response = await fetch(
-          `https://luisnellai.xyz/siraj/admin/get_assigned_task.php/${user_id}`,
+          `https://luisnellai.xyz/new_gis_backend/admin/get_assigned_task.php/${user_id}`,
           {
             method: "GET",
             headers: {
@@ -114,7 +114,7 @@ const ViewSurvey = () => {
       const userId = tasksToRemove[0]?.user_id;
       const assessmentNumbers = tasksToRemove.map(task => task.AssesmentNo);
 
-      const response = await fetch('https://luisnellai.xyz/siraj/admin/remove_assinedtask.php', {
+      const response = await fetch('https://luisnellai.xyz/new_gis_backend/admin/remove_assinedtask.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

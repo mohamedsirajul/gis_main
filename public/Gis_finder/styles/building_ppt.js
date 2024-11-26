@@ -11,7 +11,7 @@ window.getBuildingColor = function(gisId) {
         gisId = String(gisId);
         
         // Get and parse the green GISIDs from localStorage
-        const greenGisIdsString = localStorage.getItem('submittedGisIds');
+        const greenGisIdsString = localStorage.getItem('submittedNewGisIds');
         const greenGisIds = greenGisIdsString ? JSON.parse(greenGisIdsString) : [];
         
         // Debug logging

@@ -54,7 +54,7 @@ function Addcsv() {
 
     try {
       const response = await axios.post(
-        "https://luisnellai.xyz/siraj/addcsv.php",
+        "https://luisnellai.xyz/new_gis_backend/addcsv.php",
         formData,
         {
           headers: {
